@@ -1,4 +1,4 @@
-class BlogsController < ApplicationController
+class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
@@ -8,7 +8,7 @@ class BlogsController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-  def new=======
+  def new
     @article = Article.new
   end
 
@@ -26,5 +26,4 @@ class BlogsController < ApplicationController
       params.require(:article).permit(:title, :description)
     end
 
->>>>>>> refs/remotes/origin/master
 end
