@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to @article
     else
-      render new_article_path
+      render :new
     end
   end
 
@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
     if @article.update(article_params)
       redirect_to @article
     else
-      render edit_article_path
+      render :edit
     end
   end
 
